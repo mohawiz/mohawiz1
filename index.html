@@ -1,0 +1,112 @@
+    <!DOCTYPE html>
+    <html class="Html">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/0badde5c0b.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    * {
+    box-sizing: border-box;
+    }
+    
+        .column {
+            background-color: transparent;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            margin: 0 auto;
+            box-shadow: 3px 3px 5px #888888;
+        }
+    .hover-button{
+            background-color: #007bff; /* Change to your desired button color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+    .hover-button:hover{
+        background-color: #0056b3;
+    }
+    .row {
+    display: flex;
+    }
+
+    /* Create three equal columns that sits next to each other */
+    .column {
+    flex: 50%;
+    padding: 10px;
+    height: 315px; /* Should be removed. Only for demonstration */
+    }
+    </style>
+    </head>
+    <body>
+        
+
+    <h1>UET OLMS</h1>
+
+    <div class="row">
+    <div class="column" style="background-color:transparent;">
+        <h1>OLMS</h1>
+        <ol>
+            <li>Hacking: The Art of Exploitation by Jon Erickson</li><br>
+            <li>Introduction to Theory of Computation by Michael Sipser</li><br>
+            <li>Eloquent javascript: A modern Introduction to Programming</li>
+        </ol>
+    </div>
+
+
+
+
+
+
+
+    <div class="column" style="background-color:transparent;">
+        <h1>Add a New Book</h1>
+        
+        <div class="content">
+            <form id="fr">
+                <label for="title"><i class="fa-solid fa-t fa-flip " style="color: #3475e5;"></i>itle:</label><br>
+                <input type="text" id="title" name="title" required><br><br>
+
+                <label for="authors"><i class="fa-solid fa-a fa-shake " style="color: #457bd9;"></i>uthor:</label><br>
+                <input type="text" id="authors" name="Author" required><br><br>
+
+                <label for="ISBN"><i class="fa-solid fa-i fa-bounce " style="color: #3e74d0;"></i>SBN:</label><br>
+                <input type="text" id="ISBN" name="ISBN" required><br>
+
+                <br><button type="submit" class="hover-button">Submit</button>
+
+                
+            </form>
+            <script>
+                document.getElementById("fr").addEventListener("submit", function (event) {
+                    event.preventDefault(); // Prevent the form from actually submitting
+        
+                    // Get the values from the form fields
+                    var title = document.getElementById("title").value;
+                    var author = document.getElementById("author").value;
+                    var isbn = document.getElementById("isbn").value;
+        
+                    // You can use the values as needed, for example, display them:
+                    alert("Title: " + title + "\nAuthor: " + author + "\nISBN: " + isbn);
+        
+                    // You can also send the data to a server for processing if desired.
+                });
+            </script>
+        </div>
+    </div>
+
+
+    <div class="column" style="background-color:transparent;">
+        <h1>Search For a Book</h1><br>
+        <i class="fa-brands fa-searchengin fa-fade fa-2xl" style="color: #437ddf;"></i>
+        <label for="Search">Searh for a Book:</label><br><br>
+        <input type="text" id="Search" name="Search"><br>
+        <br><button type="submit" class="hover-button">Search</button>
+    </div>
+    </div>
+
+    </body>
+    </html>
